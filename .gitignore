@@ -17,8 +17,8 @@ __pycache__/
 # macOS junk
 .DS_Store
 
-# Streamlit cache
-.streamlit/
+# Streamlit cache & secrets
+.streamlit/secrets.toml
 
 # Jupyter
 .ipynb_checkpoints/

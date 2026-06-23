@@ -1,8 +1,7 @@
-crewai
-crewai-tools
-python-dotenv
-streamlit
-litellm
-plotly
-chromadb==0.4.24
-numpy<2.0
+setuptools>=68.0.0
+crewai==1.14.7
+crewai-tools==1.14.7
+litellm>=1.89.3
+python-dotenv>=1.0.0
+streamlit>=1.35.0
+plotly>=5.0.0

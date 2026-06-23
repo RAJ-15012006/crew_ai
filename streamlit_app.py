@@ -16,6 +16,15 @@ os.environ.setdefault("CHROMA_SERVER_NOFILE", "65536")
 os.environ.setdefault("ANONYMIZED_TELEMETRY", "False")
 
 import streamlit as st
+
+# Load API keys from Streamlit secrets (Cloud) or .env (local)
+from dotenv import load_dotenv
+load_dotenv()
+try:
+    os.environ.setdefault("GROQ_API_KEY", st.secrets["GROQ_API_KEY"])
+    os.environ.setdefault("SERPER_API_KEY", st.secrets["SERPER_API_KEY"])
+except Exception:
+    pass
 import time
 import threading
 import queue
