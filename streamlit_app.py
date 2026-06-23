@@ -12,7 +12,6 @@ Run:  streamlit run streamlit_app.py
 # on Streamlit Cloud (chroma_server_nofile is a Linux ulimit setting that
 # chromadb tries to configure at import time — this sets a safe default).
 import os
-os.environ.setdefault("CHROMA_SERVER_NOFILE", "65536")
 os.environ.setdefault("ANONYMIZED_TELEMETRY", "False")
 
 import streamlit as st
