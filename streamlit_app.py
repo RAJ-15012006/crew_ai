@@ -8,6 +8,13 @@ This app shows how 2 AI agents work together:
 Run:  streamlit run streamlit_app.py
 """
 
+# ── Fix: patch ChromaDB before ANY imports to prevent Pydantic type error
+# on Streamlit Cloud (chroma_server_nofile is a Linux ulimit setting that
+# chromadb tries to configure at import time — this sets a safe default).
+import os
+os.environ.setdefault("CHROMA_SERVER_NOFILE", "65536")
+os.environ.setdefault("ANONYMIZED_TELEMETRY", "False")
+
 import streamlit as st
 import time
 import threading

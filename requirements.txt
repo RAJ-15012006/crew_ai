@@ -4,3 +4,4 @@ python-dotenv
 streamlit
 litellm
 plotly
+chromadb==0.4.24
