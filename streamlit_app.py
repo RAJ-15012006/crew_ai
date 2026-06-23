@@ -391,7 +391,8 @@ def run_crew_thread(topic, q):
             agents=[senior_research_analyst, content_writer],
             tasks=[research_task, writing_task],
             verbose=True,
-            planning=False
+            planning=False,
+            memory=False  # Disabled to avoid ChromaDB errors on Streamlit Cloud
         )
 
         # Redirect verbose stdout into the queue so we can show live logs
